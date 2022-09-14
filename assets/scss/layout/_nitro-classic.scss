@@ -1,0 +1,32 @@
+@use '../mixins/media' as *;
+
+.nitro-classic {
+    padding-block: 5.6rem;
+    background-color: #7289da;
+    &__image {
+        width: 20rem;
+    }
+    &__paragraph {
+        text-align: left;
+        margin-top: 2.4rem;
+        line-height: 1.625;
+    }
+    &__btn-group {
+        margin-top: 3.2rem;
+    }
+    @include media_query(48rem) {
+        padding-bottom: 8rem;
+        &__content {
+            grid-column: 1 / span 6;
+        }
+    } 
+    @include media_query(64rem) {
+        padding: {
+            top: 12rem;
+            bottom: 15rem;
+        };
+        &__content {
+            grid-column: 1 / -1;
+        }
+    }
+}
